@@ -32,7 +32,7 @@ public class TestRegUnSuccess {
     }
     @Test
     public void testRegUnSuccessWithError(){
-        String error = "Missing passwordqweee";
+        String error = "Missing password";
         Register register = new Register(WRONGEMAIL);
         Response response = given()
                 .body(register)

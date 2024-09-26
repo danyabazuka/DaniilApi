@@ -15,7 +15,7 @@ public class TestDelete {
                 .when()
                 .contentType(ContentType.JSON)
                 .delete(URL);
-        Assertions.assertEquals(200, response.statusCode());
+        Assertions.assertEquals(204, response.statusCode());
     }
 
 

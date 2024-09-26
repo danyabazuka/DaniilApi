@@ -35,7 +35,7 @@ public class TestGetResourceList {
                 .contentType(ContentType.JSON)
                 .get(URL1);
         Assertions.assertEquals(200, response.statusCode());
-        List<ResourceList> users = response.then().log().all().extract().body().jsonPath().getList("data", ResourceList.class);
+        ResourceList users = response.then().log().all().extract().body().jsonPath().getObject("data", ResourceList.class);
     }
     @Test
     public void testGetResourceListNotFound(){
